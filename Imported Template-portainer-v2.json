@@ -1411,7 +1411,7 @@
         {
             "title": "Organizr v2",
             "name": "organizr-v2",
-            "image": "organizrtools/organizr-v2:php-fpm",
+            "image": "organizr/organizr",
             "description": "Organizr allows you to setup Tabs that will be loaded all in one webpage. You can then work on your server with ease.",
             "categories": [
                 "Other",
@@ -1438,6 +1438,11 @@
                     "default": "1001",
                     "label": "PGID",
                     "name": "PGID"
+                },
+                {
+                    "name": "fpm",
+                    "default": "true",
+                    "label": "fpm"
                 }
             ],
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/organizr-icon.png",
