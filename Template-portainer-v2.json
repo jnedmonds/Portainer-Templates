@@ -85,7 +85,7 @@
             ],
             "env": [
                 {
-					"default": "Australia/Perth",
+                    "default": "Australia/Perth",
                     "label": "TZ",
                     "name": "TZ"
                 }
@@ -133,7 +133,7 @@
                     "name": "PGID"
                 },
                 {
-					"default": "Australia/Perth",
+                    "default": "Australia/Perth",
                     "label": "TZ",
                     "name": "TZ"
                 }
@@ -432,7 +432,7 @@
                     "name": "APP_KEY"
                 },
                 {
-					"default": "Australia/Perth",
+                    "default": "Australia/Perth",
                     "label": "TZ",
                     "name": "TZ"
                 },
@@ -537,7 +537,7 @@
                     "name": "PGID"
                 },
                 {
-					"default": "Australia/Perth",
+                    "default": "Australia/Perth",
                     "label": "TZ",
                     "name": "TZ"
                 }
@@ -1009,7 +1009,7 @@
                     "name": "PGID"
                 },
                 {
-					"default": "Australia/Perth",
+                    "default": "Australia/Perth",
                     "label": "TZ",
                     "name": "TZ"
                 }
@@ -1167,7 +1167,7 @@
                     "name": "PGID"
                 },
                 {
-					"default": "Australia/Perth",
+                    "default": "Australia/Perth",
                     "label": "TZ",
                     "name": "TZ"
                 },
@@ -1564,7 +1564,7 @@
                     "name": "PGID"
                 },
                 {
-					"default": "Australia/Perth",
+                    "default": "Australia/Perth",
                     "label": "TZ",
                     "name": "TZ"
                 },
@@ -1776,7 +1776,7 @@
                     "name": "GUID"
                 },
                 {
-					"default": "Australia/Perth",
+                    "default": "Australia/Perth",
                     "label": "TZ",
                     "name": "TZ"
                 },
@@ -2241,7 +2241,7 @@
                     "name": "PGID"
                 },
                 {
-					"default": "Australia/Perth",
+                    "default": "Australia/Perth",
                     "label": "TZ",
                     "name": "TZ"
                 }
@@ -2385,7 +2385,7 @@
                     "name": "PGID"
                 },
                 {
-					"default": "Australia/Perth",
+                    "default": "Australia/Perth",
                     "label": "Timezone",
                     "name": "TZ"
                 }
@@ -3990,6 +3990,21 @@
                 "3000:3000/tcp"
             ],
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/dradis-logo.png",
+            "type": 1
+        },
+        {
+            "title": "PHPMyadmin",
+            "name": "phpmyadmin",
+            "image": "linuxserver/phpmyadmin",
+            "categories": [
+                "db"
+            ],
+            "platform": "linux",
+            "restart_policy": "unless-stopped",
+            "ports": [
+                "80/tcp"
+            ],
+            "logo": "https://github.com/phpmyadmin/phpmyadmin/raw/master/favicon.ico",
             "type": 1
         }
     ]
