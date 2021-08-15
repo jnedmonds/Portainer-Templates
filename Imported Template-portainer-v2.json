@@ -4109,11 +4109,6 @@
                     "label": "EMAIL"
                 },
                 {
-                    "name": "URL",
-                    "default": "",
-                    "label": "URL"
-                },
-                {
                     "name": "SUBDOMAINS",
                     "default": "",
                     "label": "SUBDOMAINS"
