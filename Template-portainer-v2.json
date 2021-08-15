@@ -4136,6 +4136,51 @@
             ],
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-ls-logo.png",
             "type": 1
+        },
+        {
+            "title": "SQL Server",
+            "name": "sqlserver",
+            "image": "mcr.microsoft.com/mssql/server:2019-latest",
+            "categories": [
+                "db"
+            ],
+            "platform": "linux",
+            "ports": [
+                "1441:1441/tcp"
+            ],
+            "volumes": [
+                {
+                    "container": "/var/opt/mssql/data",
+                    "bind": ""
+                },
+                {
+                    "container": "/var/opt/mssql/log ",
+                    "bind": ""
+                },
+                {
+                    "container": "/var/opt/mssql/secrets",
+                    "bind": ""
+                }
+            ],
+            "env": [
+                {
+                    "name": "ACCEPT_EULA",
+                    "default": "Y",
+                    "label": "ACCEPT_EULA"
+                },
+                {
+                    "name": "SA_PASSWORD",
+                    "default": "",
+                    "label": "SA_PASSWORD"
+                },
+                {
+                    "name": "TZ",
+                    "default": "Australia/Perth",
+                    "label": "TZ"
+                }
+            ],
+            "logo": "https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b",
+            "type": 1
         }
     ]
 }
