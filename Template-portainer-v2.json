@@ -4004,7 +4004,137 @@
             "ports": [
                 "80/tcp"
             ],
+            "volumes": [
+                {
+                    "container": "/config",
+                    "bind": ""
+                }
+            ],
+            "env": [
+                {
+                    "name": "PMA_HOST",
+                    "default": "",
+                    "description": "",
+                    "label": "PMA_HOST"
+                },
+                {
+                    "name": "PMA_PORT",
+                    "default": "3306",
+                    "description": "",
+                    "label": "PMA_PORT"
+                },
+                {
+                    "name": "TZ",
+                    "default": "Australia/Perth",
+                    "description": "",
+                    "label": "TZ"
+                },
+                {
+                    "name": "PUID",
+                    "default": "1001",
+                    "label": "PUID"
+                },
+                {
+                    "name": "PGID",
+                    "default": "1001",
+                    "label": "PGID"
+                }
+            ],
             "logo": "https://github.com/phpmyadmin/phpmyadmin/raw/master/favicon.ico",
+            "type": 1
+        },
+        {
+            "title": "Grafana",
+            "name": "grafana",
+            "image": "grafana/grafana",
+            "description": "Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, Elasticsearch, OpenTSDB, Prometheus and InfluxDB.",
+            "categories": [
+                "monitoring",
+                "web"
+            ],
+            "platform": "linux",
+            "ports": [
+                "3000:3000/tcp"
+            ],
+            "volumes": [
+                {
+                    "container": "/var/lib/grafana",
+                    "bind": ""
+                }
+            ],
+            "env": [
+                {
+                    "name": "GF_SERVER_ROOT_URL",
+                    "default": "http://192.168.1.115",
+                    "label": "GF_SERVER_ROOT_URL"
+                },
+                {
+                    "name": "GF_SECURITY_ADMIN_PASSWORD",
+                    "default": "admin",
+                    "label": "GF_SECURITY_ADMIN_PASSWORD"
+                }
+            ],
+            "logo": "https://github.com/atribe/unRAID-docker/raw/master/icons/grafana.png",
+            "type": 1
+        },
+        {
+            "title": "Swag",
+            "name": "swag",
+            "image": "linuxserver/swag",
+            "description": "SWAG - Secure Web Application Gateway is a rebirth of our letsencrypt docker image, a full fledged web server and reverse proxy that includes Nginx, Php7, Certbot (Let's Encrypt client) and Fail2ban.\n\nBefore running this container, make sure that the url and subdomains are properly forwarded to this container's host.\n  - Port 443 on the internet side of the router should be forwarded to this container's port 443.\n  - If you need a dynamic dns provider, you can use the free provider duckdns.org where the url will be yoursubdomain.duckdns.org and the subdomains can be \"www,ftp,cloud,\" or \"wildcard\" if using duckdns validation\n  - The container detects changes to url and subdomains, revokes existing certs and generates new ones during start. \n  - If you'd like to password protect your sites, you can use htpasswd. Run the following command on your host to generate the htpasswd file docker exec -it swag htpasswd -c /config/nginx/.htpasswd <username>",
+            "categories": [
+                "web"
+            ],
+            "platform": "linux",
+            "restart_policy": "unless-stopped",
+            "ports": [
+                "81:80/tcp",
+                "444:443/tcp"
+            ],
+            "volumes": [
+                {
+                    "container": "/config",
+                    "bind": ""
+                }
+            ],
+            "env": [
+                {
+                    "name": "EMAIL",
+                    "default": "",
+                    "label": "EMAIL"
+                },
+                {
+                    "name": "URL",
+                    "default": "",
+                    "label": "URL"
+                },
+                {
+                    "name": "SUBDOMAINS",
+                    "default": "",
+                    "label": "SUBDOMAINS"
+                },
+                {
+                    "name": "ONLY_SUBDOMAINS",
+                    "default": "true",
+                    "label": "ONLY_SUBDOMAINS"
+                },
+                {
+                    "name": "VALIDATION",
+                    "default": "http",
+                    "label": "VALIDATION"
+                },
+                {
+                    "name": "PUID",
+                    "default": "1001",
+                    "label": "PUID"
+                },
+                {
+                    "name": "PGID",
+                    "default": "1001",
+                    "label": "PGID"
+                }
+            ],
+            "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-ls-logo.png",
             "type": 1
         }
     ]
