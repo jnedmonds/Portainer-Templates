@@ -4137,6 +4137,11 @@
                     "name": "TZ",
                     "default": "Australia/Perth",
                     "label": "TZ"
+                },
+                {
+                    "name": "URL",
+                    "default": "",
+                    "label": "URL"
                 }
             ],
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-ls-logo.png",
